@@ -15,6 +15,26 @@ body {
   padding: 2% 0 2% 0;
   margin: 3% 20% 0 20%;
 }
+.price {
+  border: 1px solid black;
+  margin: 0 45% 0 45%;
+}
+
+#green {
+  background-color: lightgreen;
+}
+
+#yellow {
+  background-color: rgb(255, 255, 188);
+}
+
+#orange {
+  background-color: rgb(240, 169, 128);
+}
+
+#red {
+  background-color: rgb(255, 110, 110);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
