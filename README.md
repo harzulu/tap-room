@@ -17,7 +17,7 @@ Keep track of all your bars drinks on tap! Get to add new kegs, remove kegs, tak
 
 # 📊 Diagram
 
-<img src="" alt="">
+<img src="https://i.ibb.co/ZxCDzpW/Screen-Shot-2021-02-12-at-1-24-50-PM.png" alt="Flowchart of page" width="600px" height="auto">
 
 # 🧑‍💻 Contributers
 
@@ -77,7 +77,7 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-|  |  |  |  |
+| 2/12/2021 | Keg details page doesn't show | ✅ | Forgot '[0]' after assigning the currentKeg value in BarController |
 
 # ©️ License & Copyright
 
