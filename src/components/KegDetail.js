@@ -10,6 +10,7 @@ export default function KegDetail(props) {
       <h3>{keg.brand}</h3>
       <h3>{keg.price}</h3>
       <h3>{keg.alcoholContent}</h3>
+      <h3>{keg.pints}</h3>
     </>
   );
 }
