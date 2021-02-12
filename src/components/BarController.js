@@ -26,8 +26,28 @@ export default class BarController extends React.Component {
     })
   }
 
+  handleChangePints = () => {
+    const selectedKeg = this.state.currentKeg;
+    const newQuantity = Object.assign({}, selectedKeg, { pints: parseInt(selectedKeg.pints) - 1 });
+
+    const newKegList = this.state.masterKegList
+      .filter(keg => keg.id !== this.state.currentKeg.id)
+      .concat(newQuantity);
+    this.setState({
+      masterKegList: newKegList,
+      currentKeg: newQuantity
+    });
+  }
+
   handleClick = () => {
-    this.setState({currentViewPage: !this.state.currentViewPage});
+    if (this.state.currentKeg != null) {
+      this.setState({
+        currentViewPage: false,
+        currentKeg: null
+      });
+    } else {
+      this.setState(prevState => ({currentViewPage: !prevState.currentViewPage}));
+    }
   }
 
   render() {
@@ -38,7 +58,7 @@ export default class BarController extends React.Component {
       currentVisibleState = <NewKegForm onNewKegCreation={this.handleNewKegCreation}/>
       buttonText = "Return to keg list";
     } else if (this.state.currentKeg != null) {
-      currentVisibleState = <KegDetail keg={this.state.currentKeg} />
+      currentVisibleState = <KegDetail keg={this.state.currentKeg} changePints={this.handleChangePints}/>
       buttonText = "Return to keg list";
     } else {
       currentVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg}/>
