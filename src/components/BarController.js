@@ -9,12 +9,12 @@ export default class BarController extends React.Component {
     this.state = {
       masterKegList: [],
       currentKeg: null,
-      currentViewPage: true
+      currentViewPage: false
     }
   }
 
   handleChangingSelectedKeg = (id) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id);
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({currentKeg: selectedKeg})
   }
 
