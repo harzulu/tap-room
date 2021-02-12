@@ -5,6 +5,8 @@ import Keg from './Keg.js'
 export default function KegList(props) {
   return (
     <>
+      <h2>What's on tap?</h2>
+      <hr />
       {props.kegList.map((keg) => 
         <Keg
           whenKegClicked = { props.onKegSelection }
