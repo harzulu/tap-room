@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function KegDetail(props) {
-  const { keg, changePints, onClickingDelete } = props;
+  const { keg, changePints, onClickingDelete, editKeg } = props;
   let pintAmmount, pintButton, note;
   
   if (keg.pints < 11 && keg.pints > 0) {
@@ -25,6 +25,7 @@ export default function KegDetail(props) {
       {note}
       {pintButton}
       <button onClick={ () => onClickingDelete(keg.id) }>Remove Keg</button>
+      <button onClick={ () => editKeg(keg)}>Edit this keg</button>
     </>
   );
 }
@@ -32,5 +33,6 @@ export default function KegDetail(props) {
 KegDetail.propTypes = {
   keg: PropTypes.object,
   changePints: PropTypes.func,
-  onClickingDelete: PropTypes.func
+  onClickingDelete: PropTypes.func,
+  editKeg: PropTypes.func
 }
