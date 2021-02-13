@@ -39,6 +39,14 @@ export default class BarController extends React.Component {
     });
   }
 
+  handleDeleteKeg = (id) => {
+    const newMasterKegList = this.state.masterKegList.filter(keg => keg.id !== id);
+    this.setState({
+      masterKegList: newMasterKegList,
+      currentKeg: null
+    });
+  }
+
   handleClick = () => {
     if (this.state.currentKeg != null) {
       this.setState({
@@ -58,7 +66,7 @@ export default class BarController extends React.Component {
       currentVisibleState = <NewKegForm onNewKegCreation={this.handleNewKegCreation}/>
       buttonText = "Return to keg list";
     } else if (this.state.currentKeg != null) {
-      currentVisibleState = <KegDetail keg={this.state.currentKeg} changePints={this.handleChangePints}/>
+      currentVisibleState = <KegDetail keg={this.state.currentKeg} changePints={this.handleChangePints} onClickingDelete={this.handleDeleteKeg}/>
       buttonText = "Return to keg list";
     } else {
       currentVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg}/>
