@@ -25,7 +25,7 @@ export default function Keg(props) {
 
   return (
     <>
-    <div onClick={() => props.whenKegClicked(props.id)}>
+    <div class="kegList" onClick={() => props.whenKegClicked(props.id)}>
       <h3>{props.name}</h3>
       <div class="price" id={colorId}>
         <h3>${props.price}</h3>
