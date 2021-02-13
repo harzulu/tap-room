@@ -15,6 +15,8 @@
 
 Keep track of all your bars drinks on tap! Get to add new kegs, remove kegs, take pints out one by one, and much more! All while letting the site keep track of the details.
 
+## **<a href="https://harzulu.github.io/tap-room/">View a live version here!</a>**
+
 # 📊 Diagram
 
 <img src="https://i.ibb.co/ZxCDzpW/Screen-Shot-2021-02-12-at-1-24-50-PM.png" alt="Flowchart of page" width="600px" height="auto">
